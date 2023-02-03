@@ -1,0 +1,90 @@
+
+
+/* > PC low resolution */
+/* @media (max-width: 1024px) and (max-width: 1239px) { */
+
+@media (max-width: 414px) {
+.db__sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  transform: translateX(-100%);
+  transition: transform linear 0.2s;
+}
+
+.db__hambuger-mobile-input:checked ~ .db__sidebar {
+  transform: translateX(0);
+  display: block;
+}
+
+.db__sidebar-header {
+  display: none;
+}
+
+.db__sidebar-menu-item {
+  margin-bottom: 20px;
+}
+
+.db__contents-top {
+  display: none;
+}
+.db__contents-bottom {
+  flex-direction: column;
+}
+
+.db__header {
+  display: none;
+}
+
+.db__contents-bottom {
+  margin-top: 0;
+}
+
+.db__contents {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 0;
+}
+
+.db__form {
+  margin-left: 0;
+}
+
+.db__chart{
+  width: unset;
+}
+
+.db__form {
+  padding: unset;
+}
+
+.db__form-wrapper {
+  padding: 28px 50px;
+}
+
+.db__form-button {
+  margin-top: 0px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.db__chart {
+  margin-bottom: 25px;
+}
+
+.db__hambuger-mobile {
+  display: block;
+  margin-bottom: 0;
+ }
+
+ .db__header-mobile {
+  display: flex;
+ }
+
+ .db__chart>h1 {
+  font-size: 16px;
+ }
+}
+
