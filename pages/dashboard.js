@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import Form from "@/components/Form";
 import Chart from "@/components/Chart";
-
 import { useEffect, useState } from "react";
 
 const DashBoard = () => {
@@ -14,11 +13,10 @@ const DashBoard = () => {
       .then((data) => setData(data))
       .catch((err) => console.log(err.message));
   }, [render]);
-  // console.log(data);
 
   return (
-    <Layout>
-      <div>
+    <div>
+      <Layout>
         <div className="db__contents">
           <div className="db__contents-top">
             <table className="db__table list" id="devicesList">
@@ -60,9 +58,8 @@ const DashBoard = () => {
             <Form setRender={setRender}></Form>
           </div>
         </div>
-        {/* <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> */}
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 };
 

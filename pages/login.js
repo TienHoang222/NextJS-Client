@@ -1,73 +1,3 @@
-// import axios from "axios";
-// import React, { useState } from "react";
-// import { useRouter } from "next/router";
-
-// export default function Home() {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   const mainDivStyle = {
-//     padding: "1em",
-//   };
-
-//   const router = useRouter();
-
-//   const formStyle = {
-//     display: "flex",
-//     flexDirection: "column",
-//     maxWidth: "560px",
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     const credentials = { username, password };
-
-//     const user = await axios.post("/api/auth/login", credentials);
-//     if (user.status === 201) {
-//       router.push("/dashboard");
-//     }
-//     // if (user.status === 300) {
-//     //   router.push("/");
-//     // }
-//     console.log(user);
-//   };
-
-//   const handleLogOut = async () => {
-//     const user = await axios.get("/api/auth/logout");
-
-//     console.log(user);
-//   };
-
-//   return (
-//     <div style={mainDivStyle}>
-//       <form style={formStyle} onSubmit={(e) => handleSubmit(e)}>
-//         <label htmlFor="username"> Username </label>
-//         <input
-//           type="text"
-//           name="username"
-//           id="username"
-//           onChange={(e) => setUsername(e.target.value)}
-//         />
-
-//         <label htmlFor="password"> Username </label>
-//         <input
-//           type="text"
-//           name="password"
-//           id="password"
-//           onChange={(e) => setPassword(e.target.value)}
-//         />
-
-//         <button> Log in </button>
-//       </form>
-
-//       {/* <button onClick={() => handleGetUser()}> User </button> */}
-
-//       <button onClick={() => handleLogOut()}> Logout </button>
-//     </div>
-//   );
-// }
-
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
@@ -132,11 +62,11 @@ export default function Home() {
           <div className="login-form__action">
             <input
               className="login-form__button"
-              type="submit"
+              type="button"
               name="log"
               id="logButton"
               value="LOGIN"
-              style={{ cursor: "pointer" }}
+              onclick="Login()"
             ></input>
             <a className="login-form__sign-up-link" href="#">
               or create new account
